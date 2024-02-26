@@ -1,0 +1,20 @@
+.container {
+    display: flex;
+    
+    height: 400px;
+    
+    border: 1px solid black;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+    flex-flow: row wrap-reverse;
+    /* justify-content: space-evenly; */
+    align-items: stretch;
+
+    }
+.item {
+    width: 100px;
+    height: 100px;
+    border: 1px solid rgb(191, 23, 23);
+    margin: 10px;
+    
+}    
