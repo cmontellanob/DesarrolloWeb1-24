@@ -1,0 +1,88 @@
+#contenido {
+    margin: 0 auto;
+    width: 900px;
+    border: 1px solid  black;
+}
+.encabezado {
+    display: flex;
+    background-color: rgb(75, 222, 75);
+    width: 900px;
+}
+.logo{
+    width: 20%;
+  
+}
+.universidad {
+    padding-top: 10px;
+    width: 80%;
+ 
+}
+#logousfx{
+    width: 50px;
+    padding-left: 70%;
+}
+.rojo{
+    color: red;
+}
+.azul{
+    color: blue;
+}
+.amarillo{
+    color:yellow;
+}
+.verde {
+    color: green;
+}
+.carrera {
+    background-color:rgb(75, 222, 75);
+    display: flex;
+    
+}
+.nombre {
+    width: 80%;
+}
+.semestre{
+    text-align: right;
+    width: 20%;
+    padding-right: 10px;
+}
+#espacio{
+    display: flex;
+    border:1px  solid black;
+}
+#izquierda{
+    width: 100px;
+    border-right: 1px solid black;
+    
+}
+#centro{
+    width: 700px;
+    padding-top: 20px;
+    padding-left: 10px;
+}
+#derecha {
+    width: 100px;
+    border-left:  1px solid black;
+}
+.pie{
+    color: white;
+    background-color: rgb(16, 143, 143);
+    text-align: center;
+}
+ul.menu{
+    list-style-type: none;
+    padding:10px ;
+}
+
+ul.menu li a:link,ul.menu li a:visited{
+    text-decoration: none;
+}
+ul.menu li a:hover{
+    background-color:  rgb(16, 143, 143);
+}
+ul.menu li {
+    background-color: bisque;
+}
+ul.menu li a{
+    margin-bottom: 10px;
+}
