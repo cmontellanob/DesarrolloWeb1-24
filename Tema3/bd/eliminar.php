@@ -1,5 +1,7 @@
 <?php
 include("conexion.php");
+include('verificar.php');
+include('permisos.php');
 
 $id=$_GET['id'];
 

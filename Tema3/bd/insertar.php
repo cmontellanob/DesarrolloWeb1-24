@@ -1,6 +1,6 @@
 <?php
 include("conexion.php");
-
+include('verificar.php');
 $Nombres = $_POST["nombre"];
 $Apellido = $_POST["apellidos"];
 $Edad = $_POST["edad"];

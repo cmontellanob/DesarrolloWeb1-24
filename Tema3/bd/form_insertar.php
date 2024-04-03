@@ -6,11 +6,15 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Insertar Persona</h1>
+    
+    
     <?php  include('conexion.php');
+    include('verificar.php');
+    include('permisos.php');
     $sql="Select id,nombre from ocupaciones";
     $result = $con->query($sql);
     ?>
+    <h1>Insertar Persona</h1>
     <form action="insertar.php" method="post">
         <label for="nombre">Nombre:</label>
         <input type="text" name="nombre" >

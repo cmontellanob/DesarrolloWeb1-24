@@ -6,14 +6,20 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Editar Persona</h1>
+    
     <?php $id=$_GET['id'];
     include('conexion.php');
-    $sql="SELECT id,nombres,apellidos,edad,sexo,ocupacion FROM personas where id=".$id;
+    include('verificar.php');
+    include('permisos.php');
+    $sql="SELECT id,nombres,apellidos,edad,sexo,ocupacion_id FROM personas where id=".$id;
     $result = $con->query($sql);
     $datos = $result->fetch_assoc();
-    ?>
 
+    $sql="SELECT id,nombre from ocupaciones";
+    $resultocupa = $con->query($sql);
+
+    ?>
+<h1>Editar Persona</h1>
 
     <form action="editar.php" method="post">
         <input type="hidden" name="id" value="<?php echo $datos['id'];?> ">
@@ -30,7 +36,15 @@
         <input type="radio" name="sexo" value="M" <?php echo $datos['sexo']=='M'?'checked':''?> >Masculino
         <input type="radio" name="sexo" value="F" <?php echo $datos['sexo']=='F'?'checked':''?> >Femenino
         <label for="ocupacion">Ocupacion:</label>
-        <input type="text" name="ocupacion" value="<?php echo $datos['ocupacion']; ?>">
+        <select name="ocupacion_id" >
+            <?php while ($ocupacion = $resultocupa->fetch_assoc()) {
+        ?>
+        <option value="<?php  echo $ocupacion['id'] ?>"   
+        <?php echo $ocupacion['id']==$datos['ocupacion_id']?"selected":"";?>
+        
+        ><?php  echo $ocupacion['nombre'] ?></option>
+        <?php }?>
+         </select>
         <br>
         <input type="submit" value="Editar">
     
