@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var cadena=prompt('Ingrese una cadena:','');
+        console.log(cadena);
+        document.write('La cadena ingresada es:'+cadena);
+        document.write('<br>');
+        document.write('La cantidad de caracteres son:'+cadena.length);
+        document.write('<br>');
+        document.write('El primer carácter es:'+cadena.charAt(0));
+        document.write('<br>'); 
+        document.write('Los primeros 3 caracteres son:'+cadena.substring(0,3));
+        document.write('<br>'); 
+        if (cadena.indexOf('hola')!=-1)
+          document.write('Se ingresó la subcadena hola');
+        else 
+          document.write('No se ingresó la subcadena hola');
+        document.write('<br>'); 
+        document.write('La cadena convertida a mayúsculas es:'+cadena.toUpperCase());
+        document.write('<br>');
+        document.write('La cadena convertida a minúsculas es:'+cadena.toLowerCase());
+        document.write('<br>'); 
+        document.write('La cadena con espacios en blanco al principio y al final:'+cadena.trim());
+        document.write('<br>');
+        document.write('La cadena separada por palabras es:');
+        var palabras=cadena.split(' ');
+        for (var i in palabras)
+          document.write(palabras[i]+'<br>');
+        
+
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        alumno={
+            nombre: "Alex",
+            edad: 20,
+            cu: "35-2564",
+            materias: ["Matemáticas", "Física", "Programacion"],
+           
+        }
+        alumnoJson=JSON.stringify(alumno);
+        objetoAlumno=JSON.parse(alumnoJson);
+        
+        
+
+        console.log(alumno);
+        console.log(alumnoJson);
+        console.log(objetoAlumno);
+
+        document.write(alumnoJson);
+    </script>
+    
+</body>
+</html>

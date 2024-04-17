@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tabla {
+            border: 1px solid black;
+            border-collapse: collapse;
+            
+        }
+        .tabla td {
+            border: 1px solid black;
+            width: 50px;
+            height: 50px;
+            background-color: aqua;
+        }
+        
+    </style>
+</head>
+<body>
+    <script>
+        var num1 = parseInt(prompt("Introduce filas: "));
+        var num2 = parseInt(prompt("Introduce columnas: "));
+        document.write('<table class="tabla">');
+        for (var f = 0; f < num1; f++) {
+            document.write("<tr>");
+            for (var c = 0; c < num2; c++) document.write("<td>&nbsp;</td>");
+            document.write("</tr>");
+        }
+        document.write("</table>");
+    </script>
+    
+</body>
+</html>

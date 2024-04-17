@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var dias = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"];
+        var meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+        var i;
+        document.write("<h2>Meses </h2>");
+        for (i in meses) {
+            document.writeln(meses[i] + "<br>");
+
+        }
+        document.write("<h2>Dias </h2>");
+        for (i in dias) {
+            document.writeln(dias[i] + "<br>");
+        }
+        //ordenar meses
+        meses.sort();
+        console.log(meses);
+        document.writeln("<h2>Meses Ordenados</h2>");
+        for (i; i < meses.length; i++) {
+            document.writeln(meses[i] + "<br>");
+        }
+        document.write("<h2>Dias Ordenados</h2>");
+        
+        dias.forEach(function (elemento, indice, array) {
+            document.writeln(`dia[${indice}]=${elemento} <br>`);
+        });
+
+        
+        
+
+
+    </script>
+
+</body>
+
+</html>

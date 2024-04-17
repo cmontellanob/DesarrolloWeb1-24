@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function saludar() {
+            var tiempo = new Date();
+            var hora, cad = "son las ";
+            with (tiempo) {
+                
+                hora = getHours();
+                cad += hora + ":" + getMinutes() + ":" + getSeconds();
+            }
+            if (hora < 12)
+                cad = "Buenos días, " + cad;
+            else if (hora < 18)
+                cad = "Buenas tardes, " + cad;
+            else
+                cad = "Buenas noches, " + cad;
+            return cad
+        }
+        document.write( saludar());
+    </script>
+
+</body>
+
+</html>

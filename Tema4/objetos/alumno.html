@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    function alumno(nombre, edad,cu, materias) {
+        this.nombre = nombre
+        this.edad = edad
+        this.cu = cu
+        this.materias = materias
+    }
+    function MostrarAlumno() {
+        document.write("El alumno " + this.nombre + " tiene " + this.edad + " años ");
+    }
+    function MostrarMaterias(){
+        document.write("y cursa las materias: ");
+        document.write('<ul>')
+        for (var i in this.materias) {
+            document.write("<li>"+this.materias[i] + "</li>");
+        }
+        document.write('</ul>')
+    }
+    alumno.prototype.mostrarMaterias = MostrarMaterias;
+    alumno.prototype.mostrar = MostrarAlumno;
+    var alex = new alumno("Alex", 20, "1º", ["Matemáticas", "Física", "Química"]);
+    var ana = new alumno("Ana", 21, "2º", ["Historia", "Geografía", "Filosofía"]);
+    alex.mostrar();
+    alex.mostrarMaterias();
+    document.write("<br>");
+    ana.mostrar();
+    ana.mostrarMaterias();
+    
+</script>
+    
+    
+</body>
+</html>

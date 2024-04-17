@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function coche(marca, modelo, color) {
+            this.marca = marca
+            this.modelo = modelo
+            this.color = color
+            }
+            coche.prototype.MostrarCoche=function () {
+                document.write("El autos marca "+this.marca+" y modelo "+this.modelo);
+            
+            }
+            var auto1 = new coche("Ford", "Fiesta", "Rojo");
+            var auto2 = new coche("Chevrolet", "Camaro", "Amarillo");
+            auto1.MostrarCoche();
+            document.write("<br>");
+            auto2.MostrarCoche();
+
+            
+    </script>
+</body>
+</html>
