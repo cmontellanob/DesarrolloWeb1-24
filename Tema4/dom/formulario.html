@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <FORM ACTION="recibir.php" METHOD="GET">
+        <INPUT TYPE="text" name="nombre" value="carlos"><br>
+        <br>
+        Estado Civil
+        <input type="radio" name="estado" value="Soltero">Soltero
+        <input type="radio" name="estado" value="Casado">Casado
+        <input type="radio" name="estado" value="Divociado">Divociado
+        <input type="radio" name="estado" value="Viudo">Viudo
+        
+        
+            <INPUT TYPE="submit" VALUE="Enviar">
+            
+    </FORM>
+    <script type="text/javascript">
+        var nom = document.getElementsByName("nombre");
+        estado= document.getElementsByName("estado");
+        console.log(nom);
+        console.log(estado);
+
+    </script>
+</body>
+
+
+</body>
+
+</html>

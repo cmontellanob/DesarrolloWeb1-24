@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form action="">
+        <label for="a">Introduce a</label>
+        <input type="number" name="a" id="a" value="2" onchange="limpiar()">
+        <br>
+        <label for="b">Introduce b</label>
+        <input type="number" name="b" id="b" value="1"onchange="limpiar()">
+        <br>
+        <input type="button" value="Sumar" onclick="sumar()" >
+        <div id="resultado">&nbsp;</div>
+        <script>
+            function sumar(){
+                var a=document.getElementById('a').value;
+                var b=document.getElementById('b').value;
+                var c=parseInt(a)+parseInt(b);
+                document.getElementById('resultado').innerHTML=c;
+
+            }
+            function limpiar()
+            {
+                document.getElementById('resultado').innerHTML="";
+            }
+            
+
+        </script>
+
+
+    </form>
+
+</body>
+
+</html>
