@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="texto" onkeypress="">
+
+    <div id="contenido">
+
+    </div>
+
+    <script>
+        document.getElementById('texto').addEventListener('keypress',function(event){
+            if(event.key== 'Enter'){
+                var  elemento = document.createElement("p");
+                elemento.innerHTML = document.getElementById('texto').value;
+                document.getElementsByTagName('body')[0].appendChild(elemento);
+            }
+           // console.log(event.key)
+        })
+    </script>
+</body>
+</html>

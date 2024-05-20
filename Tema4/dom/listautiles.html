@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+      <h2>Lista de Utiles</h2>
+      <label for="">Util</label>
+      <input type="text" name="" id="texto">
+      <button id="agregar" onclick="lista()">Añadir</button>
+    </div>
+
+    <ul id="lista" >
+
+    </ul>
+
+    <script>
+        function lista(){
+            var lista = document.getElementById('lista');
+            var texto = document.getElementById('texto').value;
+
+            lista.innerHTML+="<li>"+texto+"</li>";
+        }
+    </script>
+</body>
+</html>

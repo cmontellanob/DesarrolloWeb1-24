@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .contenedor {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .imagen {
+            width: 100px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <img src="images/arquitecturacomputadoras.jpg" class="imagen" id="img0" onmouseover="mostrar('img0')" onmouseleave="normal('img0')">
+        <img src="images/bigdata.jpg" class="imagen" id="img1"onmouseover="mostrar('img1')" onmouseleave="normal('img1')">
+        <img src="images/Captacha.png" class="imagen" id="img2"onmouseover="mostrar('img2')" onmouseleave="normal('img2')">
+        <img src="images/CursoAndroid.jpg" class="imagen" id="img3"onmouseover="mostrar('img3')" onmouseleave="normal('img3')">
+        <img src="images/introduccioinformatica.jpg" class="imagen" id="img4"onmouseover="mostrar('img4')" onmouseleave="normal('img4')">
+        <img src="images/Captacha.png" class="imagen" id="img5"onmouseover="mostrar('img5')" onmouseleave="normal('img5')">
+        <img src="images/introduccioinformatica.jpg" class="imagen" id="img6"onmouseover="mostrar('img6')" onmouseleave="normal('img6')">
+        <img src="images/Captacha.png" class="imagen" id="img7"onmouseover="mostrar('img7')" onmouseleave="normal('img7')">
+        <img src="images/introduccioinformatica.jpg" class="imagen" id="img8"onmouseover="mostrar('img8')" onmouseleave="normal('img8')">
+        <img src="images/introduccioinformatica.jpg" class="imagen" id="img9"onmouseover="mostrar('img9')" onmouseleave="normal('img9')">
+    </div>
+
+    <script>
+        function mostrar(id) {
+            document.getElementById(id).style.width="200px";
+        }
+        function normal(id) {
+            document.getElementById(id).style.width="100px";
+        }
+    </script>
+</body>
+</html>

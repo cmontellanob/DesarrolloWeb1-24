@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="radio" value="si" name="pregunta" id="pregunta_si" /> SI
+    <input type="radio" value="no" name="pregunta" id="pregunta_no" /> NO
+    <input type="radio" value="nsnc" name="pregunta" id="pregunta_nsnc" checked="checked" /> NS/NC
+    <button id="boton">Comprobar</button>
+    <script type="text/javascript">
+
+        var boton = document.getElementById('boton');
+        boton.addEventListener('click', function () {
+            var elementos = document.getElementsByName("pregunta");
+            for (var i = 0; i < elementos.length; i++) {
+                alert(" Elemento: " + elementos[i].value + "\n Seleccionado: " +
+                    elementos[i].checked);
+            }
+        })
+
+    </script>
+
+
+</body>
+
+</html>

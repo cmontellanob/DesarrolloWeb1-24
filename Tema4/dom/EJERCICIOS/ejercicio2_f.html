@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 2. Crear una lista de tareas donde cada elemento de la lista tenga un botón "Eliminar". Al
+     hacer clic en el botón de eliminar de un elemento de la lista, dicho elemento debe ser
+      eliminado del DOM.P -->
+      <ul id="lista">
+        <li id="t1">tarea1 <input type="button" value="Borrar" onclick="borrar('t1')"></li>
+        <li id="t2">tarea2 <input type="button" value="Borrar" onclick="borrar('t2')"></li>
+        <li id="t3">tarea3 <input type="button" value="Borrar" onclick="borrar('t3')"></li>
+        <li id="t4">tarea4 <input type="button" value="Borrar" onclick="borrar('t4')"></li>
+      </ul>
+      <script>
+            function borrar(id){
+                var html;
+                switch (id){
+                    case 't1':
+                     html=`<li id="t2">tarea2 <input type="button" value="Borrar" onclick="borrar('t2')"></li>
+                     <li id="t3">tarea3 <input type="button" value="Borrar" onclick="borrar('t3')"></li>
+                     <li id="t4">tarea4 <input type="button" value="Borrar" onclick="borrar('t4')"></li>`
+                    break
+                    case 't2':
+                     html=`<li id="t1">tarea1 <input type="button" value="Borrar" onclick="borrar('t1')"></li>
+                     <li id="t3">tarea3 <input type="button" value="Borrar" onclick="borrar('t3')"></li>
+                     <li id="t4">tarea4 <input type="button" value="Borrar" onclick="borrar('t4')"></li>`
+                     break
+                     case 't3':
+                     html=`<li id="t1">tarea1 <input type="button" value="Borrar" onclick="borrar('t1')"></li>
+                     <li id="t2">tarea2 <input type="button" value="Borrar" onclick="borrar('t2')"></li>
+                     <li id="t4">tarea4 <input type="button" value="Borrar" onclick="borrar('t4')"></li>`
+                    break
+                    case 't4':
+                     html=`<li id="t1">tarea1 <input type="button" value="Borrar" onclick="borrar('t1')"></li>
+                     <li id="t2">tarea2 <input type="button" value="Borrar" onclick="borrar('t2')"></li>
+                     <li id="t3">tarea3 <input type="button" value="Borrar" onclick="borrar('t3')"></li>`
+                     
+                     break 
+
+                }
+                var lista=document.getElementById('lista')
+                
+                lista.innerHTML=html;
+            }
+      </script>
+</body>
+</html>

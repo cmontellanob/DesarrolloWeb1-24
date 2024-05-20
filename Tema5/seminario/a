@@ -1,0 +1,5 @@
+Calcular el fibonaci de un numero a traves de un formulario que solicita n
+y el boton calcular ,
+
+el boton calcular llama por ajax  a la pagina finbonaci.php con n como parametro e imprime
+en un div con id=resultado de color verde, con bordes rojos y cemtrado el valor del fibonaci

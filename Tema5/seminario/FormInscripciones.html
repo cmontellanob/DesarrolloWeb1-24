@@ -1,0 +1,53 @@
+  <h2 id="pageName">Formulario de Pre-Inscripcion </h2>
+  <FORM name="form1" action='javascript:Preinscribir()' method="POST" id="form-inscripcion">
+  <p >Denominacion  (ej.Sr, Dr, Est)
+    <INPUT id="tTitulo" maxLength="5" size="6" name="tTitulo">
+    Documento Identidad*
+    <INPUT id="tIdentidad" maxLength="15" size="17" name="tIdentidad">
+  <br>
+   Nombres*
+      <INPUT id="tNombres" maxLength="30" size="30" name="tNombres">
+        Apellidos*
+      <INPUT id="tApellidos" maxLength="30" size="30" name="tApellidos">
+    <div>Sexo*:<INPUT id="RGSexo" type="radio" value="M" name="RGSexo">
+            Masculino <INPUT type="radio" CHECKED value="F" name="RGSexo">
+            Femenino
+		</div>
+    <p>Edad
+      <INPUT id="tEdad" maxLength="2" size="3" name="tEdad">
+      email*
+      <INPUT id="tEmail" maxLength="60" size="62" name="tEmail" AUTOCOMPLETE="OFF">
+    </p>
+    <p>Departamento
+      <SELECT id="SDepartamento" name="SDepartamento">
+          <OPTION value="1" selected>CHUQUISACA</OPTION>
+          <OPTION value="2">LA PAZ</OPTION>
+          <OPTION value="3">COCHABAMBA</OPTION>
+          <OPTION value="4">ORURO</OPTION>
+          <OPTION value="5">POTOSI</OPTION>
+          <OPTION value="6">TARIJA</OPTION>
+          <OPTION value="7">SANTA   CRUZ</OPTION>
+          <OPTION value="8">BENI</OPTION>
+          <OPTION value="9">PANDO</OPTION>
+          <OPTION value="10">OTRO PAIS</OPTION>
+      </SELECT>
+      Profesion 
+      <INPUT id="tProfesion" maxLength="30" size="32" name="tProfesion">
+    </p>
+    <p>Monto Depositado*
+      <SELECT id="sTipo" name="sTipo">
+        <option value="E">150 Bs - Estudiante</option>
+        <option value="P">300 Bs - Profesional</option>
+          <OPTION value="X">400 Bs - Extranjero</OPTION>
+      </SELECT>
+    <div ><img src="images/boleta.jpg" alt="dep" width="381" height="110"></div>
+    <div> Numero de Deposito*
+      <INPUT id="tNumeroDeposito" maxLength="10" size="10" name="tNumeroDeposito">
+	  </div>
+        <BR>
+      * Son campos requeridos para completar el registro   
+    <p>
+      <INPUT type="submit" value="Aceptar" name="Submit">
+      <INPUT type="reset" value="Borrar" name="Submit2">
+    </p>
+</FORM>

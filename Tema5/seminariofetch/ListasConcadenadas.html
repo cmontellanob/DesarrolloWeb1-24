@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/
+xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Ejercicio 17 - Listas desplegables encadenadas</title>
+<script type="text/javascript">
+var peticion = null;
+function inicializa_xhr() {
+if (window.XMLHttpRequest) {
+return new XMLHttpRequest();
+} else if (window.ActiveXObject) {
+return new ActiveXObject("Microsoft.XMLHTTP");
+}
+}
+function muestraProvincias() {
+if (peticion.readyState == 4) {
+if (peticion.status == 200) {
+var lista = document.getElementById("provincia");
+var provincias = eval('(' + peticion.responseText + ')');
+lista.options[0] = new Option("- selecciona -");
+var i=1;
+for(var codigo in provincias) {
+lista.options[i] = new Option(provincias[codigo], codigo);
+i++;
+}
+}
+}
+}
+function cargaMunicipios() {
+var lista = document.getElementById("provincia");
+var provincia = lista.options[lista.selectedIndex].value;
+if(!isNaN(provincia)) {
+peticion = inicializa_xhr();
+if (peticion) {
+peticion.onreadystatechange = muestraMunicipios;
+peticion.open("POST", "http://localhost/RUTA_HASTA_ARCHIVO/CargaMunicipiosJSON.php?nocache=" + Math.random(), true);
+peticion.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+peticion.send("provincia=" + provincia);
+}
+}
+}
+function muestraMunicipios() {
+if (peticion.readyState == 4) {
+if (peticion.status == 200) {
+var lista = document.getElementById("municipio");
+var municipios = eval('(' + peticion.responseText + ')');
+lista.options.length = 0;
+var i=0;
+for(var codigo in municipios) {
+lista.options[i] = new Option(municipios[codigo], codigo);
+i++;
+}
+}
+}
+}
+window.onload = function() {
+peticion = inicializa_xhr();
+if(peticion) {
+peticion.onreadystatechange = muestraProvincias;
+peticion.open("GET", "http://localhost/RUTA_HASTA_ARCHIVO/cargaProvinciasJSON.php?nocache="+Math.random(), true);
+peticion.send(null);
+}
+document.getElementById("provincia").onchange = cargaMunicipios;
+}
+</script>
+</head>
+<body>
+<h1>Listas desplegables encadenadas</h1>
+<form>
+<label for="provincia">Provincia</label>
+<select id="provincia">
+<option>Cargando...</option>
+</select>
+<br/><br/>
+<label for="municipio">Municipio</label>
+<select id="municipio">
+<option>- selecciona una provincia -</option>
+</select>
+</form>
+</body>
+</html>

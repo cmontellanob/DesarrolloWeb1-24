@@ -1,0 +1,26 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Documento sin título</title>
+<script src="jquery-1.9.1.min.js" type="text/javascript"> </script>
+</head>
+
+<body>
+<div id ="capa" style="padding:10x; background-color: #ff8800">Pon el Raton Encima de esto </div>
+<br>
+<div id ="mensaje" style="padding:10x; background-color: #ff8800">has puesto el raton encima >br> (ahora quilalo de la capa)</div>
+<script type="text/javascript">
+$('#capa').mouseenter(function(evento){
+	$('#mensaje').css("display","block");
+});
+$('#capa').mouseleave(function(evento){
+	$('#mensaje').css("display","none");
+});
+
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <select id="opciones" name="opciones">
+        <option value="1">Primer valor</option>
+        <option value="2">Segundo valor</option>
+        <option value="3">Tercer valor</option>
+        <option value="4">Cuarto valor</option>
+    </select>
+   
+    <script language="javascript" type="text/javascript">
+        // Obtener la referencia a la lista
+        var lista = document.getElementById("opciones");
+
+        lista.onchange = () => {
+            // Obtener el índice de la opción que se ha seleccionado
+            var indiceSeleccionado = lista.selectedIndex;
+            // Con el índice y el array "options", obtener la opción seleccionada
+            var opcionSeleccionada = lista.options[indiceSeleccionado];
+            // Obtener el valor y el texto de la opción seleccionada
+            var textoSeleccionado = opcionSeleccionada.text;
+            var valorSeleccionado = opcionSeleccionada.value;
+            alert("Opción seleccionada: " + textoSeleccionado + "\n Valor de la opción: " +
+                valorSeleccionado);
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>

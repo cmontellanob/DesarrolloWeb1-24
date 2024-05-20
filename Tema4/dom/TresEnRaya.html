@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .boton{
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="contenedor">
+        <h2>Juego de Tres en Raya</h2>
+        <button class="boton" id="b1" onclick="verificar(1)"></button>
+        <button class="boton" id="b2" onclick="verificar(2)"></button>
+        <button class="boton" id="b3" onclick="varificar(3)"></button> <br>
+        <button class="boton" id="b4" onclick="verificar(4)"></button>
+        <button class="boton" id="b5" onclick="verificar(5)"></button>
+        <button class="boton" id="b6" onclick="verificar(6)"></button> <br>
+        <button class="boton" id="b7" onclick="verificar(7)"></button>
+        <button class="boton" id="b8" onclick="verificar(8)"></button>
+        <button class="boton" id="b9" onclick="verificar(9)"></button> <br>
+
+    </div>
+    <div id="mensaje">turno x</div>
+    <script>
+        function verificar(valor){
+            var mensaje = document.getElementById('mensaje').innerHTML;
+            var dibujar = document.getElementById('b'+valor);
+            console.log(dibujar.value);
+            if(dibujar.value == ''){
+                var turno = mensaje.indexOf(mensaje.length-1);
+                console.log(turno);
+                dibujar.value = turno;
+                
+                if(turno == 'x'){
+                    mensaje = 'turno o';
+                }
+                else{
+                    mensaje = 'turno x';
+                }
+                document.getElementById('mensaje').innerHTML =mensaje;
+            }
+        }
+    </script>
+</body>
+</html>
