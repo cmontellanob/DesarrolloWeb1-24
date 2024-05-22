@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .contenedor{
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            
+        }
+        .item {
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #000;
+        }
+    </style>
+    <script src="fetch.js"></script>
+</head>
+<body>
+    <div class="contenedor">
+        <nav style="width:100px;background-color:yellow" class="item">menu
+            <li><a href="javascript:listar()">Listar</a></li>
+            <li><a href="javascript:cargar('form_insertar.php')">Insertar</a> </li>
+        </nav>
+        <div style="width:800px;" class="item" id="datos">CRUD CENSO</div>
+
+    </div>
+
+
+
+    
+</body>
+</html>
